@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Home Page Hello World</title>
+  <style>
+    /* Add styles for the photo grid */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Add navigation tabs -->
+  <nav>
+    <a href="home"> Home </a> <br>
+    <a href="#about-me"> About Me </a><br>
+    <a href="#contact-me"> Contact Me </a><br>
+    <a href="#my-gallery"> My Gallery </a>
+  </nav>
+
+  <!-- Add content for each tab -->
+  <section id="home">
+    <h1>Welcome to my Home Page</h1>
+    <p>This is the content for - Home.</p>
+  </section>
+
+  <section id="about-me">
+    <h1>About Me</h1>
+    <p>This is the content for - About Me.</p>
+  </section>
+
+  <section id="contact-me">
+    <h1>Contact Me</h1>
+    <p>This is the content for - Contact Me.</p>
+  </section>
+
+  <section id="my-gallery">
+    <h1>My Gallery</h1>
+    <div class="photo-grid">
+      <img src="image-1.jpg" alt="Image 1">
+      <img src="image-2.jpg" alt="Image 2">
+      <img src="image-3.jpg" alt="Image 3">
+      <!-- Add more photos here -->
+    </div>
+  </section>
+</body>
+</html>
