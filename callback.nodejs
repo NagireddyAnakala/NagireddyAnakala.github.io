@@ -1,0 +1,13 @@
+console.log("1")
+function get(){
+setTimeout(()=>{
+    console.log("2")
+    return "Hi";
+
+}
+, 1000)
+console.log("3");
+}
+
+var p=get();
+console.log(p);

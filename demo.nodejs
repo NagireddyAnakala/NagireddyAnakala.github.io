@@ -1,0 +1,141 @@
+console.log(3 / 2); // 1.5, not 1
+
+console.log("Hello, world");
+
+const age = 25;
+console.log("I am " + age + " years old."); // String concatenation
+console.log(`I am ${age} years old.`); // Template literal 
+
+Boolean(""); // false
+Boolean(234); // true
+
+const obj = 10000000;
+obj.a = 1; // no error
+console.log(obj); // { a: 1 }
+
+function parentFunc() {
+  const paa = 1;
+
+  function nestedFunc() {
+    const qaaa = 4; // parentFunc can't use this
+    
+    return paa + qaa;
+  }
+  console.log(paa+qaa)
+  return nestedFunc(); // 5
+}
+
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  sayHello() {
+    return `Hello, I'm ${this.name}!`;
+  }
+}
+
+const p = new Person("Maria");
+console.log(p.sayHello());
+
+
+console.log("-------Block scored declarations-------")
+var x=10
+console.log(x);
+
+const babies = ["dog", "cat", "hen"].map((name) => `baby ${name}`);
+==================================================================
+fs.readFile(filename, (err, content) => {
+  // This callback is invoked when the file is read, which could be after a while
+  if (err) {
+    throw err;
+  }
+  console.log(content);
+});
+// Code here will be executed while the file is waiting to be read
+
+// Promise-based
+fs.readFile(filename)
+  .then((content) => {
+    // What to do when the file is read
+    console.log(content);
+  })
+  .catch((err) => {
+    throw err;
+  });
+// Code here will be executed while the file is waiting to be read
+
+// Async/await
+async function readFile(filename) {
+  const content = await fs.readFile(filename);
+  console.log(content);
+}
+=================================================================
+
+
+
+if(true){
+    var x= 15
+    console.log(x);
+}
+
+console.log(x);
+console.log("----------------")
+
+let y=10
+
+if(true){
+    y=15
+console.log(y)
+}
+console.log(y)
+console.log("----------------")
+ 
+ const a=[]
+
+ a.push('Hello','World')
+ console.log(a);
+ //a=[]
+console.log("----------------")
+
+console.log("----------Arrow functions  ------")
+
+let arr = [1, 2, 3, 4]
+
+arr.map((val) => val * 2) // [2, 4, 6, 8]
+console.log(arr);
+arr.filter((val) => val % 2 == 0) // [2, 4]
+console.log(arr);
+arr.reduce((acc, val) => acc + val, 0) // 10
+console.log(arr);
+
+console.log("----------Optional Chaining ------")
+person = {
+  name: {
+    first: 'John',
+    last: 'Doe'
+  },
+  age: 42
+}
+console.log(person.name.first)// 'John'
+console.log(person.name.last) // 'Doe'
+console.log(person.age)
+
+console.log("----------Null-ish coalescing ------")
+
+function print(val) {
+  return val ?? 'Missing'
+}
+
+print(undefined) // 'Missing'
+print(null) // 'Missing'
+
+print(0) // 'Missing'
+print('') // 'Missing'
+print(false) // 'Missing'
+print(NaN) // 'Missing'
+
+
+
+
+
+

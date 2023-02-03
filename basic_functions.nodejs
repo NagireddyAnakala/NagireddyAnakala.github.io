@@ -1,0 +1,8 @@
+function add(x, y) {
+  const total = x + y;
+  console.log(x+y);
+  return total;
+}
+add(); // NaN
+
+add(2, 3, 4); // 5
