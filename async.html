@@ -1,0 +1,19 @@
+<script>
+function calc(a,b){
+    return new Promise(function(x,y){
+ // get api call
+ setTimeout(function() {
+             x(a+b);
+           },1000)
+    }) 
+}
+
+const add= async function(){
+    var result1=await calc(5,6);
+    var result2=await calc(result1,10);
+    return await calc(result2,20);
+}
+
+add().then(x=> { console.log(x); })
+
+</script>

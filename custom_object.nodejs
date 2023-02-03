@@ -1,0 +1,20 @@
+var phone=
+{
+brand : "Redmi",
+model : "Note 8 pro",
+os : "Android",
+color :{
+
+    front: "white",
+    back: "black"
+},
+callRing : function(){
+
+    return "Ring Ring"
+}
+
+}
+
+console.log(phone.brand);
+console.log(phone.color.back);
+console.log(phone.callRing());

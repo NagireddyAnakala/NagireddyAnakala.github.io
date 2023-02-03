@@ -1,0 +1,54 @@
+<html lang="en-US">
+<head>
+    <style>
+        .highlight {
+          color: rgb(38, 0, 255);
+          background-color: rgb(7, 235, 224);
+          padding: 10px;
+          width: 250px;
+          text-align: center;
+        }
+      </style>
+<meta charset="utf-8"/>
+<title> Simple DOM Example</title>
+</head>
+
+<body>
+<section>
+<img
+src="image1.png"
+alt="A Photgraphy is an art"/>
+<p id="myId">Here We will be add a link to the</p>
+<a href="https://www.mozilla.org/en-GB/">Mozilla Home page</a>
+
+
+</section>
+</body>
+<script>
+const link = document.querySelector('a');
+link.textContent = 'Mozilla Developer Network';
+link.href = 'https://developer.mozilla.org';
+let x=document.getElementById("myId")
+const elements=document.getElementsByTagName("section")
+const sect = document.querySelector('section');
+const para = document.createElement('p');
+para.textContent = ' we are adding some text for testing the code';
+sect.appendChild(para);
+const text = document.createTextNode(' — the premier source for web development knowledge.');
+const linkPara = document.querySelector('p');
+linkPara.appendChild(text);
+
+sect.appendChild(linkPara);
+//sect.removeChild(linkPara);
+
+para.setAttribute('class', 'highlight');
+
+
+
+console.log(x);
+console.log(link);
+console.log(link.ELEMENT_NODE);
+console.log(elements);
+</script>
+
+</html>
